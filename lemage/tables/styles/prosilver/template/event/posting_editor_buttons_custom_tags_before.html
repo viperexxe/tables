@@ -1,0 +1,19 @@
+<input type="button" class="button2 bbcode-table" name="addbbcode_table" value="Tabelle" onclick="insertTableTemplate()" title="Tabelle einfügen" />
+
+<script>
+function insertTableTemplate() {
+    const template = '[table]\n[tr]\n[th]Header 1[/th]\n[th]Header 2[/th]\n[/tr]\n[tr]\n[td]Daten 1[/td]\n[td]Daten 2[/td]\n[/tr]\n[/table]';
+    if (typeof insert_text === 'function') {
+        insert_text(template);
+    } else {
+        // Fallback for older phpBB or different editor setups
+        const textarea = document.getElementById('message');
+        if (textarea) {
+            const start = textarea.selectionStart;
+            const end = textarea.selectionEnd;
+            textarea.value = textarea.value.substring(0, start) + template + textarea.value.substring(end);
+        }
+    }
+}
+</script>
+

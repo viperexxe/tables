@@ -1,0 +1,67 @@
+/* LeMage Tables - Premium Styles */
+
+.lemage-table-wrapper {
+    margin: 24px 0;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    overflow: hidden; /* Round corners for internal table */
+    overflow-x: auto;
+}
+
+.lemage-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 0.95rem;
+}
+
+.lemage-table th {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 14px 18px;
+    text-align: left;
+    font-weight: 700;
+    color: inherit;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.03em;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+    border-right: 1px solid rgba(128, 128, 128, 0.1);
+}
+
+.lemage-table td {
+    padding: 12px 18px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.15);
+    border-right: 1px solid rgba(128, 128, 128, 0.1);
+    transition: background 0.2s ease;
+}
+
+.lemage-table th:last-child, 
+.lemage-table td:last-child {
+    border-right: none;
+}
+
+.lemage-table tr:last-child td {
+    border-bottom: none;
+}
+
+.lemage-table tr:hover td {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+/* Responsive Table handling */
+@media screen and (max-width: 700px) {
+    .lemage-table-wrapper {
+        border-radius: 8px;
+    }
+    .lemage-table th, .lemage-table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}

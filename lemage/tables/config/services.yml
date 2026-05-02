@@ -1,0 +1,8 @@
+services:
+    lemage.tables.listener:
+        class: lemage\tables\event\listener
+        arguments:
+            - '@template'
+        tags:
+            - { name: kernel.event_listener, event: core.text_formatter_s9e_configure_after, method: configure_tables }
+            - { name: kernel.event_listener, event: core.page_header, method: add_assets }
